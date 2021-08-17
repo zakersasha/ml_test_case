@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css.css') }}">
+</head>
+<body>
+<aside>
+    <span class="logo">Мошенничество с ДТП</span>
+
+    <h3>Навигация</h3>
+    <ul>
+        <a href="/">
+            <li><i class="fas fa-home"></i> Главная</li>
+        </a>
+        <a href="/rating">
+            <li><i class="fas fa-address-card"></i> Рейтинг</li>
+        </a>
+        <a href="/analysis">
+            <li><i class="far fa-newspaper"></i> Анализ</li>
+        </a>
+    </ul>
+</aside>
+<main>
+    {% block content %}
+    {% endblock %}
+</main>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+
+{% block title %}Рейтинг участников ДТП{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>Рейтинг участников ДТП</h1>
+        <table class="table_col">
+            <colgroup>
+                <col style="background:#2c2c2c;">
+            </colgroup>
+            <tr>
+                <th>Участник</th>
+                <th>Количество ДТП</th>
+
+            </tr>
+            {% for key, value in sorted_dictionary.items() %}
+                <tr>
+                    <th>{{ key }}</th>
+                    <th>{{ value }}</th>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+{% endblock %}

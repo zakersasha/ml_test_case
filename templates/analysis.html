@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+
+{% block title %}Анализ происшествий{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>Анализ происшествий</h1>
+
+        <img height="600" width="600" src="data:image/png;base64, {{ plot_url }} ">
+    <h3>Группировки</h3>
+        {% for item in bad_groups %}
+        <tr>{{item}}</tr>
+        {% endfor %}
+    </div>
+{% endblock %}
